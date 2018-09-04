@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grafico TOP 2K18 Corno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <canvas id = "myChart">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+            <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    //The Type of Chart we want to create == O tipo de Grafico que queremos Criar
+                    type: 'line',
+
+                    //the data for our dataset == Os dados pros nossos conjuntos de dados
+                    data: {
+                        //rotulos para X
+                        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+                        //CFG da linha
+                        datasets: [{
+                            label: "Nivel de corno do Jãõ",
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data: [0, 10, 5, 2, 80, 30, 45, 150, 265, 85, 300, 180],
+                        }]
+                    },
+                    
+                    //Configuration opitions go here == Configurações de opções vão aqui
+                    options: {}
+                });    
+            </script>
+    </canvas>
+    
+</body>
+</html>
